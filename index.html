@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Viewer</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" integrity="sha384-XXXXXXXX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-XXXXXXXX" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/dataViewApp/app.js"></script>
+    <script type="text/javascript" src="js/dataViewApp/controllers/mainController.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class='banner'>
+        <div class='container'>
+            <h1>Data Viewer</h1>
+        </div>
+    </div>
+
+    <div class="container main-frame" ng-app="dataViewApp" ng-controller="mainController" ng-init="init()">
+
+        <nav class="navbar navbar-dark bg-inverse">
+            <div class="btn-group" role="group" aria-label="First group">
+                <button type="button" class="btn btn-secondary"><i class="fa fa-th"></i></button>
+                <button type="button" class="btn btn-secondary"><i class="fa fa-table"></i></button>
+                <button type="button" class="btn btn-secondary"><i class="fa fa-map"></i></button>
+                <button type="button" class="btn btn-secondary"><i class="fa fa-area-chart"></i></button>
+            </div>
+        </nav>
+
+        <div class="card-columns">
+            <div ng-repeat="x in sampledata" class="card">
+                <div class="card-block">
+                    <h4 class="card-title"> {{x.name.first}} {{x.name.last}}</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
