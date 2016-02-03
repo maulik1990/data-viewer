@@ -1,0 +1,163 @@
+@keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(.5) rotate(0deg) translateY(16px);
+    transform: scale(.5) rotate(0deg) translateY(16px);
+    opacity: 0
+  }
+
+  11.25% {
+    -webkit-transform: scale(1.1) rotate(0deg) translateY(6px);
+    transform: scale(1.1) rotate(0deg) translateY(6px)
+  }
+
+  15% {
+    -webkit-transform: scale(1) rotate(0deg) translateY(4px);
+    transform: scale(1) rotate(0deg) translateY(4px);
+    opacity: 1
+  }
+
+  22.5% {
+    -webkit-transform: scale(1.25) rotate(0deg) translate(0);
+    transform: scale(1.25) rotate(0deg) translate(0)
+  }
+
+  37.5% {
+    -webkit-transform: scale(1.1) rotate(0deg) translateY(2px);
+    transform: scale(1.1) rotate(0deg) translateY(2px);
+    opacity: 1
+  }
+
+  45% {
+    -webkit-transform: scale(1) rotate(0deg) translateY(5px);
+    transform: scale(1) rotate(0deg) translateY(5px)
+  }
+
+  63.75% {
+    -webkit-transform: scale(.85) rotate(0deg) translateY(14px);
+    transform: scale(.85) rotate(0deg) translateY(14px);
+    opacity: 0
+  }
+
+  75% {
+    -webkit-transform: scale(.65) rotate(0deg) translateY(22px);
+    transform: scale(.65) rotate(0deg) translateY(22px)
+  }
+}
+
+@keyframes bounce {
+  0%,8% {
+    -webkit-transform: scale(1) rotate(0deg) translate(0);
+    transform: scale(1) rotate(0deg) translate(0)
+  }
+
+  14% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px)
+  }
+
+  20% {
+    -webkit-transform: translateY(-7px);
+    transform: translateY(-7px)
+  }
+
+  25% {
+    -webkit-transform: translateY(-13px);
+    transform: translateY(-13px)
+  }
+
+  32% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px)
+  }
+
+  39% {
+    -webkit-transform: translateY(-13px);
+    transform: translateY(-13px)
+  }
+
+  44% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px)
+  }
+
+  52%,to {
+    -webkit-transform: scale(1) rotate(0deg) translate(0);
+    transform: scale(1) rotate(0deg) translate(0)
+  }
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #F7F7F7;
+}
+
+section {
+  padding: 40px;
+  background: #555d68;
+  min-height: 140px;
+}
+
+footer {
+  padding: 20px;
+}
+
+.heart {
+  text-align: center;
+  position: relative;
+  color: white;
+
+  .chicago {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 2px;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 1.2em;
+  }
+
+  .madein, .heart {
+    pointer-events: none;
+    animation-duration: 2s;
+    animation-delay: 0;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .madein {
+    height: 14px;
+    width: 58px;
+    vertical-align: top;
+    animation-name: bounce;
+  }
+
+  .heart {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    height: 30px;
+    width: 34px;
+    margin-left: -17px;
+    opacity: 0;
+    animation-name: heartbeat;
+  }
+}
+
+.error-box {
+  width: 300px;
+  margin: 30px auto;
+
+  h1 {
+    font-family: $font-family-base;
+    font-size: 8em;
+    text-shadow: 1px 1px 1px #031017;
+    color: #2F82AB;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1em;
+  }
+}
