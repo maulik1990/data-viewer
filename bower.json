@@ -1,0 +1,61 @@
+{
+  "name": "ui-seed",
+  "version": "1.0.0",
+  "homepage": "https://egen.io",
+  "authors": [
+    "<developer>@egen.io"
+  ],
+  "description": "ui-seed App",
+  "license": "private",
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-animate": "~1.4.7",
+    "angular-bootstrap": "~0.14.3",
+    "angular-messages": "~1.4.7",
+    "angular-touch": "~1.4.7",
+    "angular-ui-notification": "~0.0.14",
+    "angular-ui-router": "~0.2.15",
+    "animate.css": "~3.4.0",
+    "bootstrap-sass": "~3.3.5",
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "moment": "~2.10.6",
+    "angular-loading-bar": "~0.8.0",
+    "font-awesome": "~4.5.0"
+  },
+  "overrides": {
+    "textAngular": {
+      "dependencies": {
+        "angular": ">=1.3.x",
+        "rangy": "~1.3.0"
+      }
+    },
+    "bootstrap-sass": {
+      "main": [
+        "./assets/stylesheets/_bootstrap.scss",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/FontAwesome.otf",
+        "./fonts/fontawesome-webfont.eot",
+        "./fonts/fontawesome-webfont.svg",
+        "./fonts/fontawesome-webfont.ttf",
+        "./fonts/fontawesome-webfont.woff",
+        "./fonts/fontawesome-webfont.woff2"
+      ]
+    }
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.7"
+  },
+  "resolutions": {
+    "angular": "~1.4.7"
+  }
+}

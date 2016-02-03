@@ -1,0 +1,21 @@
+header {
+  .navbar-brand {
+    float: none;
+  }
+
+  .logo {
+    display: block;
+    transition: 0.3s;
+    margin: -14px auto;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 4px 2px 8px rgba(52,52,52,0.85);
+    padding: 0;
+    min-width: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
