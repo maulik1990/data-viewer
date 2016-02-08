@@ -1,11 +1,11 @@
 {
-  "name": "ui-seed",
+  "name": "data-viewer",
   "version": "1.0.0",
   "homepage": "https://egen.io",
   "authors": [
     "<developer>@egen.io"
   ],
-  "description": "ui-seed App",
+  "description": "data-viewer App",
   "license": "private",
   "dependencies": {
     "angular": "~1.4.7",
@@ -13,6 +13,7 @@
     "angular-bootstrap": "~0.14.3",
     "angular-messages": "~1.4.7",
     "angular-touch": "~1.4.7",
+    "angular-ui-grid": "3.1.0",
     "angular-ui-notification": "~0.0.14",
     "angular-ui-router": "~0.2.15",
     "animate.css": "~3.4.0",
