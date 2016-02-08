@@ -8,6 +8,7 @@
       'ngTouch',
       'ui.router',
       'ui.bootstrap',
+      'ui.grid',
       'angular-loading-bar',
 
       'egen.app'

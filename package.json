@@ -1,5 +1,5 @@
 {
-  "name": "ui-seed",
+  "name": "data-viewer",
   "version": "1.0.0",
   "description": "https://egen.io",
   "config": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/egensolutions/ng-seed.git"
   },
   "keywords": [
-    "ui-seed",
+    "data-viewer",
     "egen",
     "egen.solutions"
   ],

@@ -1,4 +1,4 @@
-# ui-seed
+# data-viewer
 egen.io
 
 ## Table of Contents

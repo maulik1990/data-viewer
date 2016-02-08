@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('egen.app.footer', [
+    .module('egen.app.infotable', [
     ]);
 
 })(angular);

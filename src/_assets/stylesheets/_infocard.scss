@@ -1,0 +1,48 @@
+.infocard {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card-block {
+    border: 1px solid #BFBABA;
+    width: 359px;
+    height: 350px;
+    margin: 10px;
+
+    &-image {
+      width: 100%;
+      height:50%;
+      display: block;
+    }
+    &-content {
+      display: flex;
+
+      &-left {
+        flex: 1;
+      }
+      &-right{
+        flex: 1;
+        position: relative;
+      }
+      &-info{
+        margin: 15px 0 0 15px;
+      }
+      &-digit{
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 50%; /* remove if you don't care about IE8 */
+        width: 100px;
+        height: 100px;
+        padding: 30px;
+        background: #fff;
+        border: 2px solid #666;
+        color: #666;
+        text-align: center;
+        font: 32px Arial, sans-serif;
+      }
+    }
+  }
+}
