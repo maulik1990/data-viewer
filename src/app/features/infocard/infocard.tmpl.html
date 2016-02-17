@@ -1,18 +1,34 @@
 <div class="container">
     <div class="card-columns infocard">
-        <div ng-repeat="info in cardVm.sampledata" class="card">
-            <div class="card-block">
-                <div class="card-block-image">
-                    <img src="/_assets/images/default-user-avatar.png"alt="info" height="100%" width="100%">
-                    <div class="card-block-content">
-                        <div class="card-block-content-left">
-                            <div class="card-block-content-info">Name : Maulik Shah</div>
-                            <div class="card-block-content-info">Age: 27</div>
-                            <div class="card-block-content-info">Gender: Male</div>
-                            <div class="card-block-content-info">Mobile: (312)-801-0571</div>
+        <div>
+            <!--<div class="card-block">-->
+                <!--<div class="card-block-image">-->
+                    <!--<img src="/_assets/images/default-user-avatar.png"alt="info" height="100%" width="100%">-->
+                    <!--<div class="card-block-content">-->
+                        <!--<div class="card-block-content-left">-->
+                            <!--<div class="card-block-content-info">Name : Maulik Shah</div>-->
+                            <!--<div class="card-block-content-info">Age: 27</div>-->
+                            <!--<div class="card-block-content-info">Gender: Male</div>-->
+                            <!--<div class="card-block-content-info">Mobile: (312)-801-0571</div>-->
+                        <!--</div>-->
+                        <!--<div class="card-block-content-right">-->
+                            <!--<div class="card-block-content-digit">40</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div ng-repeat="info in cardVm.sampleData" class="col-sm-4">
+                <div class="card">
+                    <div class="image">
+                        <img src="http://loremflickr.com/320/150?random=4" />
+                    </div>
+                    <div class="card-inner">
+                        <div class="header">
+                            <h2>Title</h2>
+                            <h2>Sub-Head</h2>
                         </div>
-                        <div class="card-block-content-right">
-                            <div class="card-block-content-digit">40</div>
+                        <div class="content">
+                            <p>Content area</p>
                         </div>
                     </div>
                 </div>

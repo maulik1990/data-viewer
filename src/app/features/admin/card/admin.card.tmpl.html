@@ -1,0 +1,21 @@
+<div class="adminCard">
+    <div class="adminCard-customModule-header">
+        <div class="adminCard-customModule-header-title">Cards</div>
+        <div  class="adminCard-customModule-header-checkBox">
+            <input  type="checkbox" name="enable" value="enable">Enable
+        </div>
+    </div>
+    <div class="adminCard-customModule-columnList">
+        <ul ng-repeat="column in adminCardVm.list track by $index" class="adminCard-customModule-columnsList-columns">
+            <li class="adminCard-customModule-columnsList-column">
+                <div class="adminCard-customModule-columnsList-header">Column {{$index + 1}}</div>
+                <div ng-model="adminCardVm.coulmn" class="adminCard-customModule-columnsList-value">{{column.name}}</div>
+                <div ng-click="adminCardVm.removeColumn($index)" class="adminCard-customModule-columnsList-removeColumn">
+                    <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div ng-click="adminCardVm.openDialogue()" class="adminCard-customModule-addElementbtn">Add Label</div>
+</div>

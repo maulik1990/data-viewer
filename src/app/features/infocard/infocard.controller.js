@@ -4,22 +4,14 @@
         .module('egen.app.infocard')
         .controller('InfoCardController', InfoCardController);
 
-    InfoCardController.$inject = ['$http'];
 
-    function InfoCardController($http) {
+    function InfoCardController(dataService) {
+        var infoCardVm = this;
 
-        var vm = this;
+        var tablePromiseData = dataService.getData();
 
-            $http.get('app/gridinfo.json').
-            success(function (data, status, headers, config) {
-                vm.sampledata = data;
-
-            }).
-            error(function (data, status, headers, config) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-            });
-
+        tablePromiseData.then(function(data) {
+            infoCardVm.sampleData = data;
+        });
     }
-
 })(angular);

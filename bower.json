@@ -19,8 +19,11 @@
     "animate.css": "~3.4.0",
     "bootstrap-sass": "~3.3.5",
     "jquery": "~2.1.4",
+    "angular-leaflet-directive": "0.10.0",
     "lodash": "~3.10.1",
     "moment": "~2.10.6",
+    "ngmap": "~1.16.3",
+    "ng-dialog": "0.5.6",
     "angular-loading-bar": "~0.8.0",
     "font-awesome": "~4.5.0"
   },
@@ -57,6 +60,8 @@
     "angular-mocks": "~1.4.7"
   },
   "resolutions": {
-    "angular": "~1.4.7"
+    "angular": "~1.4.7",
+    "jquery": "~2.1.4",
+    "localforage": "1.2.10"
   }
 }

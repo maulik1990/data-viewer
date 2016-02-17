@@ -5,27 +5,25 @@
         .module('egen.app.infotable')
         .controller('InfoTableController', InfoTableController);
 
-    InfoTableController.$inject = ['$http'];
+    function InfoTableController(dataService,adminTableDialogService) {
 
-    function InfoTableController($http) {
+        var infoTableVm = this;
+        var tablePromiseData = null;
+        infoTableVm.tableData = {};
 
-        var vm = this;
 
-        vm.getInfo = function(){
-            $http.get('app/gridinfo.json').
-            success(function (data, status, headers, config) {
-                vm.sampledata = data;
+        if(adminTableDialogService.list().length > 0) {
+            infoTableVm.tableData.columnDefs = adminTableDialogService.list();
+        }
 
-            }).
-            error(function (data, status, headers, config) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-            });
+        tablePromiseData = dataService.getData();
+        tablePromiseData.then(function(data) {
+            infoTableVm.tableData = { data: data };
+        });
 
-        };
-
-        vm.getInfo();
-
+        //
+        //console.log(AdminTableDialogService.showTable())
+        //infoTableVm.isTableViewEnable = AdminTableDialogService.showTable;
 
     }
 

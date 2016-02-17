@@ -1,0 +1,75 @@
+.adminCard {
+
+  &-customModule {
+
+    &-header {
+      margin-left: 20px;
+      margin-right: 20px;
+      border-bottom: 1px solid #0C0C0C;
+
+      &-title{
+        display: inline;
+        font-size:30px;
+        color:#000;
+      }
+      &-checkBox {
+        display: inline;
+        float: right;
+        padding: 0;
+        margin-top: 11px;
+        margin-right: 20px;
+      }
+    }
+    &-addElementbtn {
+      background-color: #e57244;
+      width: 144px;
+      float: right;
+      margin-right: 15px;
+      cursor: pointer;
+      text-align: center;
+      padding: 8px;
+      margin-top: 15px;
+      color: #fff;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    &-columnsList{
+      &-columns {
+        padding: 0;
+        margin-left: 20px;
+      }
+
+      &-column {
+        list-style-type: none;
+        display: flex;
+        margin: 20px 20px 12px 0px;
+        background-color: #fff;
+        color: #3a3b3b;
+        font-family: Colfax;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      &-header {
+        flex:1;
+        background-color: #e4e4e4;
+        text-align: center;
+        padding:3px;
+      }
+      &-value {
+        flex:2;
+        text-align: left;
+        padding: 3px 0 0 10px;
+      }
+      &-removeColumn {
+        color: #e57244;
+        margin-top: 5px;
+        margin-right: 10px;
+      }
+    }
+  }
+  & a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

@@ -5,12 +5,14 @@
     .module('app', [
       'ngAnimate',
       'ngMessages',
+      'ngDialog',
+      'ngMap',
       'ngTouch',
       'ui.router',
       'ui.bootstrap',
       'ui.grid',
       'angular-loading-bar',
-
+      'leaflet-directive',
       'egen.app'
     ])
     .config(moduleConfig)

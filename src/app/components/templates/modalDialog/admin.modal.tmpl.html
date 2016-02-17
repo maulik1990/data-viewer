@@ -1,0 +1,17 @@
+<div class="adminTableModal">
+    <div class="adminTableModal-header">Select Data Value</div>
+<div  class="adminTableModal-modalContent">
+    <div class="adminTableModal-data">
+        <div ng-click="adminDialogVm.populateLabel(jsonKey)" ng-repeat="jsonKey in adminDialogVm.columns">
+            <div  class="adminTableModal-data-value">{{jsonKey}}</div>
+        </div>
+    </div>
+    <div class="adminTableModal-labelDetails">
+        <div class="adminTableModal-labelDetails-labelHeader">Label</div>
+        <input class="adminTableModal-labelDetails-labelValue" type="text" ng-model="adminDialogVm.label">
+        <button ng-disabled="!adminDialogVm.label"
+                ng-click="adminDialogVm.addColumn(adminDialogVm.orignalKey,adminDialogVm.label)"
+                type="button" class="adminTableModal-labelDetails-submit">Submit</button>
+    </div>
+</div>
+</div>

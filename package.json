@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/egensolutions/ng-seed.git"
   },
-  "keywords": [
+    "keywords": [
     "data-viewer",
     "egen",
     "egen.solutions"

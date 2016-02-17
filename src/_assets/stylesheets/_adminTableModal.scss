@@ -1,0 +1,68 @@
+.adminTableModal {
+  &-header {
+
+  }
+  &-modalContent {
+    display: flex;
+  }
+  &-data {
+    flex:1;
+    border: 1px solid grey;
+    padding: 15px;
+    height: 300px;
+    overflow-y: scroll;
+
+      &-value {
+        border:1px solid #000;
+        padding:5px;
+        margin:5px;
+        text-align: center;
+        cursor: pointer;
+        background-color: #FFF;
+
+        &:hover{
+          background-color: grey;
+        }
+
+        &:active {
+          background-color: grey;
+        }
+      }
+
+  }
+    &-labelDetails {
+      flex:2;
+      margin-left:15px;
+      position: relative;
+
+      &-labelHeader {
+        font-size:15px;
+      }
+      &-labelValue {
+        width:300px;
+        padding-left: 10px;
+        border: 1px solid grey;
+      }
+      &-submit {
+        position: absolute;
+        border: 1px solid #B1ABAB;
+        right: 0;
+        bottom: 0;
+        margin: 23px;
+        padding: 8px;
+        width: 150px;
+        background-color: #583858;
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+
+      }
+    }
+}
+
+.ngdialog-content {
+  width:1000px !important;
+}
+button[disabled],html input[disabled]{
+  background-color: buttonface;
+}

@@ -1,0 +1,22 @@
+<div class="adminTable">
+    <div class="adminTable-customModule-header">
+        <div class="adminTable-customModule-header-title">Table</div>
+        <div  class="adminTable-customModule-header-checkBox">
+            <input  ng-model="adminTableVm.isGridEnable" type="checkbox"> Enable
+        </div>
+    </div>
+    <div class="adminTable-customModule-columnList">
+        <ul class="adminTable-customModule-columnsList-columns">
+            <li ng-repeat="column in adminTableVm.list track by $index" class="adminTable-customModule-columnsList-column"  >
+                <div class="adminTable-customModule-columnsList-header">Column {{$index + 1}}</div>
+                <div ng-model="adminTableVm.coulmn" class="adminTable-customModule-columnsList-value">{{column.name}}</div>
+                <div ng-click="adminTableVm.removeColumn($index)" class="adminTable-customModule-columnsList-removeColumn">
+                    <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div ng-click="adminTableVm.openDialogue()" class="adminTable-customModule-addElementbtn">Add Column</div>
+    <!--<button ng-click="adminTableVm.saveSettings(adminTableVm.isGridEnable)" type="button" class="adminTable-customModule-submit">submit</button>-->
+</div>
