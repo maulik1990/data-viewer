@@ -1,0 +1,62 @@
+.chartGroup {
+  position: relative;
+  top:50px;
+  display: flex;
+  flex-direction:column;
+
+  &-group1 {
+    display: flex;
+    background: #FFF;
+    &-chartType {
+      flex:1;
+      text-align: center;
+    }
+  }
+
+  &-group2 {
+    display: flex;
+    background: #FFF;
+    &-chartType {
+      flex:1;
+      text-align: center;
+    }
+  }
+
+  path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+  }
+  circle {
+    fill: steelblue;
+  }
+  .axis text{
+    font-family: sans-serif;
+    font-size: 10px;
+  }
+
+  h1{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .tick
+  {
+    stroke-dasharray: 1, 2;
+  }
+  .bar {
+    fill: steelblue;
+  }
+  .bar:hover {
+    fill: brown;
+  }
+
+}

@@ -1,24 +1,6 @@
 <div>
-    <div class="header">
-        <nav class="navbar navbar-background">
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="navbar-search">
-                        <input type="text" class="search-query mac-style" placeholder="Filter">
-                        <!--<button type="submit" class="btn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>-->
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a ui-sref=".table"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></a></li>
-                    <li><a ui-sref=".cards"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a></li>
-                    <li><a ui-sref=".map"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></li>
-                    <li><a href="./"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <div class="container">
+    <header ui-view="header"></header>
+    <div>
         <div ui-view></div>
     </div>
 

@@ -1,0 +1,78 @@
+[
+  {
+    "date":"Jan 2000",
+    "price":1394.46
+  },
+  {
+    "date":"Feb 2000",
+    "price":1366.42
+  },
+  {
+    "date":"Mar 2000",
+    "price":1498.58
+  },
+  {
+    "date":"Apr 2000",
+    "price":1452.43
+  },
+  {
+    "date":"May 2000",
+    "price":1420.6
+  },
+  {
+    "date":"Jun 2000",
+    "price":1454.6
+  },
+  {
+    "date":"Jul 2000",
+    "price":1430.83
+  },
+  {
+    "date":"Aug 2000",
+    "price":1517.68
+  },
+  {
+    "date":"Sep 2000",
+    "price":1436.51
+  },
+  {
+    "date":"Oct 2000",
+    "price":1429.4
+  },
+  {
+    "date":"Nov 2000",
+    "price":1314.95
+  },
+  {
+    "date":"Dec 2000",
+    "price":1320.28
+  },
+  {
+    "date":"Jan 2001",
+    "price":1366.01
+  },
+  {
+    "date":"Feb 2001",
+    "price":1239.94
+  },
+  {
+    "date":"Mar 2001",
+    "price":1160.33
+  },
+  {
+    "date":"Apr 2001",
+    "price":1249.46
+  },
+  {
+    "date":"May 2001",
+    "price":1255.82
+  },
+  {
+    "date":"Jun 2001",
+    "price":1224.38
+  },
+  {
+    "date":"Jul 2001",
+    "price":1211.23
+  }
+]

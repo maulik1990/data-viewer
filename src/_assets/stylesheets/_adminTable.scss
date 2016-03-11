@@ -3,8 +3,7 @@
   &-customModule {
 
     &-header {
-      margin-left: 20px;
-      margin-right: 20px;
+      margin: 20px;
       border-bottom: 1px solid #0C0C0C;
 
       &-title{
@@ -17,11 +16,11 @@
         float: right;
         padding: 0;
         margin-top: 11px;
-        margin-right: 20px;
+        font-size: 20px;
       }
     }
     &-addElementbtn {
-      background-color: #e57244;
+      background-color: #45aaf2;
       width: 144px;
       float: right;
       margin-right: 15px;
@@ -54,17 +53,19 @@
         flex:1;
         background-color: #e4e4e4;
         text-align: center;
-        padding:3px;
+        padding:10px;
+        font-size: 16px;
       }
       &-value {
         flex:2;
         text-align: left;
-        padding: 3px 0 0 10px;
+        padding: 10px 0 0 10px;
+        font-size: 16px;
       }
       &-removeColumn {
         color: #e57244;
-        margin-top: 5px;
-        margin-right: 10px;
+        font-size: 17px;
+        padding: 10px 20px 0;
       }
     }
   }

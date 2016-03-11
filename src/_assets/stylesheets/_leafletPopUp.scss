@@ -1,0 +1,31 @@
+.leaflet-popup {
+  &-card {
+    box-sizing: border-box;
+    margin-top:10px;
+    margin-bottom:10px;
+    background-color:#FFF;
+
+    &-label {
+      flex:1;
+      font-size: 15px;
+      font-weight:500;
+      text-align: left;
+      color: #757171;
+    }
+    &-value {
+      flex:1;
+      font-size: 15px;
+      font-weight:500;
+      text-align: center;
+      color: #000;
+    }
+    &-content {
+      padding:5px;
+      display: flex;
+    }
+  }
+  .leaflet-popup-content {
+    width: 250px;
+    text-align: center;
+  }
+}

@@ -7,7 +7,7 @@
 
   function AdminTableController(ngDialog,$http,$q,adminTableDialogService,dataService,$scope) {
     var adminTableVm = this;
-    adminTableVm.isTableEnable = true;
+    adminTableVm.isTableEnable = adminTableDialogService.isTableEnable();
 
 
   adminTableVm.openDialogue = function () {
@@ -23,6 +23,7 @@
 
       ngDialog.open({
         template: 'app/components/templates/modalDialog/admin.modal.tmpl.html',
+        className: 'ngdialog-theme-default dialog-width',
         scope:tableScope,
         controller: "AdminTableDialogController",
         controllerAs: 'adminDialogVm',
@@ -38,14 +39,12 @@
     adminTableVm.removeColumn = function (colIndex) {
       adminTableDialogService.remove(colIndex);
       adminTableVm.list = adminTableDialogService.list();
-    }
+    };
 
-    //adminTableVm.saveSettings = function(isTableEnable){
-    //  adminTableVm.isTableEnable = isTableEnable
-    //  console.log('Table Controller',adminTableVm.isTableEnable)
-    //  AdminTableDialogService.showTable(adminTableVm.isTableEnable)
-    //}
-
+    adminTableVm.saveSettings = function(isTableEnable){
+      adminTableVm.isTableEnable = isTableEnable;
+      adminTableDialogService.showTable(adminTableVm.isTableEnable);
+    };
 
   }
 

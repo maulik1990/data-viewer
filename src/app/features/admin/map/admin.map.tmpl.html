@@ -1,0 +1,55 @@
+<div class="adminMap">
+    <div class="adminMap-customModule-header">
+        <div class="adminMap-customModule-header-title">Map</div>
+        <div  class="adminMap-customModule-header-checkBox">
+            <input  ng-model="adminMapVm.isMapEnable" ng-click="adminMapVm.saveSettings(adminMapVm.isMapEnable)" type="checkbox" ng-checked="adminMapVm.isMapEnable">Enable
+        </div>
+    </div>
+    <div class="adminMap-customModule-content">
+         <div class="adminMap-customModule-content-columnsList">
+             <div ng-if="!adminMapVm.isKeyPresent('content1')" ng-click="adminMapVm.openDialogue('content1')" class="adminMap-customModule-addElementbtn">Add Data</div>
+             <div ng-if="adminMapVm.isKeyPresent('content1')" class="adminMap-customModule-selectedData">
+                 Name: {{adminMapVm.content1}}
+                 <div ng-click="adminMapVm.removeColumn('content1')" class="adminMap-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+             </div>
+
+             <div ng-if="!adminMapVm.isKeyPresent('content2')" ng-click="adminMapVm.openDialogue('content2')" class="adminMap-customModule-addElementbtn">Add Data</div>
+             <div ng-if="adminMapVm.isKeyPresent('content2')" class="adminMap-customModule-selectedData">
+                 Name : {{adminMapVm.content2}}
+                 <div ng-click="adminMapVm.removeColumn('content2')" class="adminMap-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+
+             </div>
+
+             <div ng-if="!adminMapVm.isKeyPresent('content3')" ng-click="adminMapVm.openDialogue('content3')" class="adminMap-customModule-addElementbtn">Add Data</div>
+             <div ng-if="adminMapVm.isKeyPresent('content3')" class="adminMap-customModule-selectedData">
+                 Name: {{adminMapVm.content3}}
+                 <div ng-click="adminMapVm.removeColumn('content3')" class="adminMap-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+             </div>
+
+             <div ng-if="!adminMapVm.isKeyPresent('content4')" ng-click="adminMapVm.openDialogue('content4')" class="adminMap-customModule-addElementbtn">Add Data</div>
+             <div ng-if="adminMapVm.isKeyPresent('content4')" class="adminMap-customModule-selectedData">
+                 Name: {{adminMapVm.content4}}
+                 <div ng-click="adminMapVm.removeColumn('content4')" class="adminMap-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+             </div>
+
+             </div>
+        <div class="adminMap-customModule-content-template">
+            <div class="adminMap-customModule-content-template-image"></div>
+            <div class="adminMap-customModule-content-template-title"></div>
+            <div class="adminMap-customModule-content-template-subTitle"></div>
+            <div class="adminMap-customModule-content-template-content"></div>
+            <div class="adminMap-customModule-content-template-content"></div>
+            <div class="adminMap-customModule-content-template-content"></div>
+            <div class="adminMap-customModule-content-template-content"></div>
+        </div>
+    </div>
+
+</div>

@@ -1,14 +1,41 @@
 <div class="admin">
-    <div class="admin-container">
+    <div class="admin-container" ng-style="{height: adminVm.windowHeight + 'px'}">
         <div class="admin-category">
-            <div class="admin-category-item"><a ui-sref=".data">Data Setting</a></div>
-            <div class="admin-category-item"><a ui-sref=".table">Table</a></div>
-            <div class="admin-category-item"><a ui-sref=".card">Cards</a></div>
+            <a ui-sref=".data">
+                <div ng-click="adminVm.activeTab = 'settings'"  ng-class="{'admin-active':adminVm.activeTab === 'settings'}" class="admin-category-item"><span class="glyphicon glyphicon-cog admin-icon" aria-hidden="true"></span>
+                    General Settings
+                </div>
+            </a>
+            <div class="admin-category-title">Data View Types</div>
+            <a ui-sref=".table">
+                <div ng-click="adminVm.activeTab = 'table'"  ng-class="{'admin-active':adminVm.activeTab === 'table'}" class="admin-category-item"><span class="glyphicon glyphicon-th-list admin-icon" aria-hidden="true"></span>
+                    Table
+                </div>
+            </a>
+            <a ui-sref=".card">
+                <div ng-click="adminVm.activeTab = 'card'"  ng-class="{'admin-active':adminVm.activeTab === 'card'}" class="admin-category-item"><span class="glyphicon glyphicon-th admin-icon" aria-hidden="true"></span>
+                    Cards
+                </div>
+            </a>
+            <a ui-sref=".map">
+                <div  ng-click="adminVm.activeTab = 'map'"  ng-class="{'admin-active':adminVm.activeTab === 'map'}" class="admin-category-item"><span class="glyphicon glyphicon-map-marker admin-icon" aria-hidden="true"></span>
+                    Map
+                </div>
+            </a>
+            <a ui-sref=".chart">
+                <div   ng-click="adminVm.activeTab = 'chart'"  ng-class="{'admin-active':adminVm.activeTab === 'chart'}" class="admin-category-item" ><span class="glyphicon glyphicon-stats admin-icon" aria-hidden="true"></span>
+                    Data Viz.
+                </div>
+            </a>
+            <a ui-sref=".timeline">
+                <div   ng-click="adminVm.activeTab = 'timeline'"  ng-class="{'admin-active':adminVm.activeTab === 'timeline'}" class="admin-category-item" ><i class="fa fa-clock-o admin-icon"></i></span>
+                    Timeline
+                </div>
+            </a>
         </div>
         <div class="admin-customModule">
             <div ui-view></div>
-            <a ui-sref="^.table" class="admin-customModule-close"></a>
-            <button ui-sref="^.table" type="button" class="admin-customModule-submit">submit</button>
+            <!--<button ui-sref="^.table" type="button" class="admin-customModule-submit">submit</button>-->
         </div>
     </div>
 </div>

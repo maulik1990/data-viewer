@@ -12,6 +12,7 @@
       'ui.bootstrap',
       'ui.grid',
       'angular-loading-bar',
+      'nvd3',
       'leaflet-directive',
       'egen.app'
     ])

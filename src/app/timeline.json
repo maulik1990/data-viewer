@@ -1,0 +1,110 @@
+[
+  {
+    "Start":"2015-May-27 20:08:15",
+    "End":"2015-Jul-27 20:08:21",
+    "Student":"Person 1",
+    "Event Type":"Pretest",
+    "tooltip":"Student 338 spent 00:00:06 on Biological Chemistry test.  Student scored 100%.",
+    "date":"Jan 2000",
+    "price":1394.46
+  },
+  {
+    "Start":"2015-Aug-28 20:08:15",
+    "End":"2015-Sep-29 20:08:21",
+    "Student":"Person 1",
+    "Event Type":"Pretest",
+    "tooltip":"Student 338 spent 00:00:06 on Biological Chemistry test.  Student scored 100%.",
+    "date":"Feb 2000",
+    "price":1211
+  },
+  {
+    "Start":"2015-May-27 20:08:21",
+    "End":"2015-Jul-12 20:08:30",
+    "Student":"Person 2",
+    "Event Type":"Learning Path",
+    "tooltip":"Student 338 spent 00:00:09 on Biological Buffers Website.  ",
+    "date":"Mar 2000",
+    "price":500
+  },
+  {
+    "Start":"2015-Jul-27 20:08:30",
+    "End":"2015-Aug-27 20:08:34",
+    "Student":"Person 3",
+    "Event Type":"Learning Path",
+    "tooltip":"Student 338 spent 00:00:04 on Organic Molecules Textbook.  ",
+    "date":"Apr 2000",
+    "price":1452.43
+  },
+  {
+    "Start":"2015-Jul-12 20:08:34",
+    "End":"2015-Aug-27 20:08:36",
+    "Student":"Person 4",
+    "Event Type":"Learning Path",
+    "tooltip":"Student 338 spent 00:00:03 on Nucleic Acid Structure and Function Textbook 2.  ",
+    "date":"May 2000",
+    "price":800
+  },
+  {
+    "Start":"2015-May-27 20:08:36",
+    "End":"2015-Sep-1 20:08:39",
+    "Student":"Person 5",
+    "Event Type":"Learning Path",
+    "tooltip":"Student 338 spent 00:00:02 on Elements of Life Website.  ",
+    "date":"Jun 2000",
+    "price":1200
+  },
+  {
+    "Start":"2015-Jul-1 20:08:39",
+    "End":"2015-Aug-1 20:45:16",
+    "Student":"Person 6",
+    "Event Type":"Learning Path",
+    "tooltip":"Student 338 spent 00:36:38 on Properties of Water Textbook.  ",
+    "date":"Jul 2000",
+    "price":1500
+  },
+  {
+    "Start":"2015-May-27 20:45:16",
+    "End":"2015-May-27 20:45:28",
+    "Student":"Person 7",
+    "Event Type":"Learning Path",
+    "tooltip":"Student 338 spent 00:00:12 on Elements of Life Website.  ",
+    "date":"Aug 2000",
+    "price":200
+  },
+  {
+    "Start":"2015-May-1 20:45:28",
+    "End":"2015-Aug-1 20:45:29",
+    "Student":"Person 8",
+    "Event Type":"Learning Path",
+    "tooltip":"Student 338 spent 00:00:01 on Nucleic Acid Structure and Function Textbook 2.  ",
+    "date":"Sep 2000",
+    "price":1200
+  },
+  {
+    "Start":"2015-Jul-1 20:45:29",
+    "End":"2015-Sep-1 20:45:30",
+    "Student":"Person 9",
+    "Event Type":"Learning Path",
+    "tooltip":"Student 338 spent 00:00:01 on Organic Molecules Textbook.  ",
+    "date":"Oct 2000",
+    "price":1436.51
+  },
+  {
+    "Start":"2015-May-15 20:45:30",
+    "End":"2015-Jul-27 20:58:52",
+    "Student":"Person 10",
+    "Event Type":"Learning Path",
+    "tooltip":"Student 338 spent 00:13:22 on Biological Buffers Website.  ",
+    "date":"Nov 2000",
+    "price":900
+  },
+  {
+    "Start":"2015-Aug-27 20:58:52",
+    "End":"2015-Oct-27 20:58:56",
+    "Student":"Person 11",
+    "Event Type":"Pretest",
+    "tooltip":"Student 338 spent 00:00:05 on Biological Chemistry test.  Student scored 0%.",
+    "date":"Dec 2000",
+    "price":1300
+  }
+]

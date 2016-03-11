@@ -1,0 +1,81 @@
+<div class="adminTimeLineModal">
+    <div class="adminTimeLineModal-chartType">
+        <div class="adminTimeLineModal-chartType-title"> Select Timeline Type </div>
+        <div class=" adminTimeLineModal-chartType-options">
+            <select ng-model="adminTimelineDialogVm.timelineType">
+                <option value="">---Please select---</option>
+                <option value="datatype">Data Type</option>
+                <option value="blocktype">Block Type</option>
+            </select>
+        </div>
+    </div>
+    <div ng-if="adminTimelineDialogVm.timelineType === 'datatype'" class="adminTimeLineModal-coordinates">
+        <div class="adminTimeLineModal-coordinates-params">
+            <div class="adminTimeLineModal-coordinates-title">X-Axis:</div>
+            <div class="adminTimeLineModal-coordinates-value">
+                <div ng-if="!adminTimelineDialogVm.isParamPresent('xAxis')"  ng-click="adminTimelineDialogVm.openDialogue('xAxis')" class="adminTimeLineModal-coordinates-value-selectValue">Select Value</div>
+                <div ng-if="adminTimelineDialogVm.isParamPresent('xAxis')" class="adminTimeLineModal-coordinates-value-selectedData">
+                    {{adminTimelineDialogVm.xAxis}}
+                    <div ng-click="adminTimelineDialogVm.removeTimeLineParams('xAxis')" class="adminTimeLineModal-coordinates-value-removeColumn">
+                        <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adminTimeLineModal-coordinates-params">
+            <div class="adminTimeLineModal-coordinates-title">Y-Axis:</div>
+            <div class="adminTimeLineModal-coordinates-value">
+                <div ng-if="!adminTimelineDialogVm.isParamPresent('yAxis')" ng-click="adminTimelineDialogVm.openDialogue('yAxis')" class="adminTimeLineModal-coordinates-value-selectValue">Select Value</div>
+                <div ng-if="adminTimelineDialogVm.isParamPresent('yAxis')" class="adminTimeLineModal-coordinates-value-selectedData">
+                   {{adminTimelineDialogVm.yAxis}}
+                    <div ng-click="adminTimelineDialogVm.removeTimeLineParams('yAxis')" class="adminTimeLineModal-coordinates-value-removeColumn">
+                        <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="adminTimelineDialogVm.timelineType === 'blocktype'" class="adminTimeLineModal-coordinates">
+        <div class="adminTimeLineModal-coordinates-params">
+            <div class="adminTimeLineModal-coordinates-title">Start Time</div>
+            <div class="adminTimeLineModal-coordinates-value">
+                <div ng-if="!adminTimelineDialogVm.isParamPresent('startTime')" ng-click="adminTimelineDialogVm.openDialogue('startTime')" class="adminTimeLineModal-coordinates-value-selectValue">Select Value</div>
+                <div ng-if="adminTimelineDialogVm.isParamPresent('startTime')" class="adminTimeLineModal-coordinates-value-selectedData">
+                    {{adminTimelineDialogVm.startTime}}
+                    <div ng-click="adminTimelineDialogVm.removeTimeLineParams('startTime')" class="adminTimeLineModal-coordinates-value-removeColumn">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adminTimeLineModal-coordinates-params">
+            <div class="adminTimeLineModal-coordinates-title">End Time</div>
+            <div class="adminTimeLineModal-coordinates-value">
+                <div ng-if="!adminTimelineDialogVm.isParamPresent('endTime')" ng-click="adminTimelineDialogVm.openDialogue('endTime')" class="adminTimeLineModal-coordinates-value-selectValue">Select Value</div>
+                <div ng-if="adminTimelineDialogVm.isParamPresent('endTime')" class="adminTimeLineModal-coordinates-value-selectedData">
+                    {{adminTimelineDialogVm.endTime}}
+                    <div ng-click="adminTimelineDialogVm.removeTimeLineParams('endTime')" class="adminTimeLineModal-coordinates-value-removeColumn">
+                        <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adminTimeLineModal-coordinates-params">
+            <div class="adminTimeLineModal-coordinates-title">Label</div>
+            <div class="adminTimeLineModal-coordinates-value">
+                <div ng-if="!adminTimelineDialogVm.isParamPresent('label')" ng-click="adminTimelineDialogVm.openDialogue('label')" class="adminTimeLineModal-coordinates-value-selectValue">Select Value</div>
+                <div ng-if="adminTimelineDialogVm.isParamPresent('label')" class="adminTimeLineModal-coordinates-value-selectedData">
+                    {{adminTimelineDialogVm.label}}
+                    <div ng-click="adminTimelineDialogVm.removeTimeLineParams('label')" class="adminTimeLineModal-coordinates-value-removeColumn">
+                        <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="adminTimeLineModal-submitInfo">
+        <button ng-click="adminTimelineDialogVm.addTimelineInfo()"
+                type="button" class="adminTimeLineModal-submitInfo-submit">Submit</button>
+    </div>
+
+</div>

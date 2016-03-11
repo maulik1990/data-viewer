@@ -1,0 +1,46 @@
+<!--<div class="timeline1">-->
+    <!--<section class="content">-->
+        <!--<dv-time-line id="timeline" data="timelineVm.timeLineData"></dv-time-line>-->
+    <!--</section>-->
+    <!--<div id="timeline1"></div>-->
+<!--</div>-->
+
+<div class="timeline">
+    <section class="content">
+        <div class="row">
+            <div ng-repeat="timeline in timelineVm.noOfTimeLinepresent track by $index" class="col-md-12">
+                <div ng-if="timelineVm.checkTimeLineDetail(timeline)" class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">TimeLine {{$index+1}}</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="timeline-content">
+                            <div ng-if="timelineVm.timeLineType === 'datatype'" ><dv-time-line id="timeline" params="timelineVm.adminTimelineParams" data="timelineVm.timeLineData"></dv-time-line></div>
+                            <div ng-if="timelineVm.timeLineType === 'blocktype'"><dv-time-line-block params="timelineVm.adminTimelineParams" data="timelineVm.timeLineData" id="timeline1"></dv-time-line-block></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div ui-view></div>
+
+<!--<section class="content">-->
+    <!--<div class="row">-->
+        <!--<div ng-repeat="timeline in timelineVm.noOfTimeLinepresent track by $index" class="col-md-6">-->
+            <!--<div  ng-if="timelineVm.checkTimeLineDetail(timeline)" class="box box-primary">-->
+                <!--<div class="box-header with-border">-->
+                    <!--<h3 class="box-title">TimeLine {{$index+1}}</h3>-->
+                <!--</div>-->
+                <!--<div class="box-body">-->
+                    <!--<div class="chart">-->
+                        <!--<dv-time-line id="timeline" data="timelineVm.timeLineData"></dv-time-line>-->
+                        <!--<div id="timeline1"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+

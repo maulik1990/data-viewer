@@ -1,7 +1,34 @@
-.infotable{
+.infotable {
+  position:relative;
+  top:50px;
+
   .ui-grid {
-    height: 550px !important;
+    height: 800px !important;
   }
+
+  .ui-grid-header-cell {
+    cursor: pointer;
+    background-color: #cccccc;
+    color: #676767;
+    border-right: 1px solid #9C9B9B;
+    text-align: center;
+    //height: 45px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+
+    :focus {
+      outline:none;
+    }
+  }
+
+  .ui-grid-cell {
+    height: 45px !important;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
 
   .ui-grid-column-menu-button {
     display: none;

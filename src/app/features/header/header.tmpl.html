@@ -1,19 +1,29 @@
-<div>
-    <nav class="navbar navbar-background">
-        <div id="navbar" class="navbar-collapse collapse">
+<nav class="navbar navbar-default headerStyle">
+    <div class="container-fluid headerStyle-hWidth">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse headerStyle-background">
             <ul class="nav navbar-nav">
-                <li class="navbar-search">
-                    <input type="text" class="search-query mac-style" placeholder="Filter">
-                    <!--<button type="submit" class="btn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>-->
+                <li>
+                    <input type="text" class="headerStyle-search" placeholder="Search">
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a ui-sref=".table"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></a></li>
-                <li><a ui-sref=".cards"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a></li>
-                <li><a href="./"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></li>
-                <li><a href="./"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></a></li>
+                <li ng-show="headerVm.isTableViewEnable()"><a ui-sref=".table"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></a></li>
+                <li ng-show="headerVm.isCardViewEnable()"><a ui-sref=".cards"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a></li>
+                <li ng-show="headerVm.isMapViewEnable()"><a ui-sref=".map"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a></li>
+                <li ng-show="headerVm.isChartViewEnable()"><a ui-sref=".charts"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></a></li>
+                <li ng-show="headerVm.isTimeLineEnable()"><a ui-sref=".timeline"><i class="fa fa-clock-o headerStyle-icon"></i></a></li>
+                <li><a ui-sref=".admin.data"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
             </ul>
-        </div>
-    </nav>
-</div>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
 

@@ -1,34 +1,20 @@
 <div class="container">
     <div class="card-columns infocard">
         <div>
-            <!--<div class="card-block">-->
-                <!--<div class="card-block-image">-->
-                    <!--<img src="/_assets/images/default-user-avatar.png"alt="info" height="100%" width="100%">-->
-                    <!--<div class="card-block-content">-->
-                        <!--<div class="card-block-content-left">-->
-                            <!--<div class="card-block-content-info">Name : Maulik Shah</div>-->
-                            <!--<div class="card-block-content-info">Age: 27</div>-->
-                            <!--<div class="card-block-content-info">Gender: Male</div>-->
-                            <!--<div class="card-block-content-info">Mobile: (312)-801-0571</div>-->
-                        <!--</div>-->
-                        <!--<div class="card-block-content-right">-->
-                            <!--<div class="card-block-content-digit">40</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <div ng-repeat="info in cardVm.sampleData" class="col-sm-4">
-                <div class="card">
-                    <div class="image">
-                        <img src="http://loremflickr.com/320/150?random=4" />
+            <div ng-repeat="info in cardVm.cardData track by $index" class="col-sm-4">
+                <div class="infocard-card">
+                    <div  ng-if="cardVm.cardKeyLookup('image')" class="infocard-image">
+                        <!--<img ng-if="cardVm.cardKeys.image == 'image'" src="{{ info[cardVm.cardKeys.image] }}" />-->
+                        <img ng-if="cardVm.cardKeys.image == 'image'" src="http://3.bp.blogspot.com/_otMKl0CFmuE/TSCxSQ7kovI/AAAAAAAAASw/RE4L3TrNYPM/s1600/caterpillar-equipment-parts.jpg" />
+                        <div ng-if="cardVm.cardKeys.image != 'image'">{{ info[cardVm.cardKeys.image] }}</div>
                     </div>
-                    <div class="card-inner">
-                        <div class="header">
-                            <h2>Title</h2>
-                            <h2>Sub-Head</h2>
+                    <div class="infocard-card-inner">
+                        <div class="infocard-header">
+                            <div ng-if="cardVm.cardKeyLookup('name')"><h3>{{ info[cardVm.cardKeys.name] }}</h3></div>
                         </div>
-                        <div class="content">
-                            <p>Content area</p>
+                        <div class="infocard-content">
+                            <div ng-if="cardVm.cardKeyLookup('content1')">{{ info[cardVm.cardKeys.content1] }}</div>
+                            <div ng-if="cardVm.cardKeyLookup('content2')">{{ info[cardVm.cardKeys.content2] }}</div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,57 @@
+<div class="adminChartModal">
+    <div class="adminChartModal-chartType">
+        <div class="adminChartModal-chartType-title"> Select Chart Type </div>
+        <div class=" adminChartModal-chartType-options">
+            <select ng-model="adminChartDialogVm.chartType">
+                <option value="">---Please select---</option>
+                <option value="linechart">Line Chart</option>
+                <option value="barchart">Bar Chart</option>
+                <option value="scatterplot">Scatter Plot</option>
+                <option value="piechart">Pie Chart</option>
+            </select>
+        </div>
+    </div>
+    <div class="adminChartModal-coordinates">
+        <div class="adminChartModal-coordinates-params">
+            <div class="adminChartModal-coordinates-title">X-Axis:</div>
+            <div class="adminChartModal-coordinates-value">
+                <div ng-if="!adminChartDialogVm.isAxisPresent('xAxis')" ng-click="adminChartDialogVm.openDialogue('xAxis')" class="adminChartModal-coordinates-value-selectValue">Select Value</div>
+                <div ng-if="adminChartDialogVm.isAxisPresent('xAxis')" class="adminChartModal-coordinates-value-selectedData">
+                    {{adminChartDialogVm.xAxis}}
+                    <div ng-click="adminChartDialogVm.removeColumn('xAxis')" class="adminChartModal-coordinates-value-removeColumn">
+                        <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adminChartModal-coordinates-params">
+            <div class="adminChartModal-coordinates-title">Y-Axis:</div>
+            <div class="adminChartModal-coordinates-value">
+                <div ng-if="!adminChartDialogVm.isAxisPresent('yAxis')" ng-click="adminChartDialogVm.openDialogue('yAxis')" class="adminChartModal-coordinates-value-selectValue">Select Value</div>
+                <div ng-if="adminChartDialogVm.isAxisPresent('yAxis')" class="adminChartModal-coordinates-value-selectedData">
+                   {{adminChartDialogVm.yAxis}}
+                    <div ng-click="adminChartDialogVm.removeColumn('yAxis')" class="adminChartModal-coordinates-value-removeColumn">
+                        <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adminChartModal-coordinates-params">
+            <div class="adminChartModal-coordinates-title">Width:</div>
+            <div class="adminChartModal-coordinates-value">
+                <input ng-model="adminChartDialogVm.width" class="adminChartModal-coordinates-inputValue" type="text">
+            </div>
+        </div>
+        <div class="adminChartModal-coordinates-params">
+            <div class="adminChartModal-coordinates-title">Height:</div>
+            <div class="adminChartModal-coordinates-value">
+                <input ng-model="adminChartDialogVm.height" class="adminChartModal-coordinates-inputValue" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="adminChartModal-submitInfo">
+        <button ng-disabled="(!adminChartDialogVm.xAxis || !adminChartDialogVm.yAxis || !adminChartDialogVm.chartType )" ng-click="adminChartDialogVm.addChartInfo()"
+                type="button" class="adminChartModal-submitInfo-submit">Submit</button>
+    </div>
+
+</div>

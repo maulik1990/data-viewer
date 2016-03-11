@@ -5,26 +5,33 @@
         .module('egen.app.infotable')
         .controller('InfoTableController', InfoTableController);
 
-    function InfoTableController(dataService,adminTableDialogService) {
+    function InfoTableController(dataService,adminTableDialogService,$filter) {
 
         var infoTableVm = this;
-        var tablePromiseData = null;
+        infoTableVm.getPromise = null;
+        infoTableVm.tableContent=null;
         infoTableVm.tableData = {};
 
-
-        if(adminTableDialogService.list().length > 0) {
-            infoTableVm.tableData.columnDefs = adminTableDialogService.list();
-        }
-
-        tablePromiseData = dataService.getData();
-        tablePromiseData.then(function(data) {
-            infoTableVm.tableData = { data: data };
+        infoTableVm.getPromise = dataService.getData();
+        infoTableVm.getPromise.then(function(data) {
+            infoTableVm.tableContent = data;
+            infoTableVm.tableData = { data: infoTableVm.tableContent };
         });
 
-        //
-        //console.log(AdminTableDialogService.showTable())
-        //infoTableVm.isTableViewEnable = AdminTableDialogService.showTable;
+        if(adminTableDialogService.list().length > 0) {
 
+            infoTableVm.tableColumnList = adminTableDialogService.list();
+            infoTableVm.tableData = {
+                enableFiltering: true,
+                columnDefs: infoTableVm.tableColumnList
+            };
+        }
+
+        //infoTableVm.refreshData = function() {
+        //    infoTableVm.tableData.data = $filter('filter')(infoTableVm.tableContent, infoTableVm.searchText, undefined);
+        //};
+
+        infoTableVm.isTableViewEnable = adminTableDialogService.isTableEnable();
     }
 
 })(angular);

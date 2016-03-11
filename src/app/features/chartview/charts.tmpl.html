@@ -1,0 +1,23 @@
+<div class="chartGroup">
+    <section class="content">
+        <div class="row">
+            <div ng-repeat="chart in chartVm.noOfCharts track by $index" class="col-md-6">
+                <div  ng-if="chartVm.checkChartDetail(chart)" class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart {{$index+1}}</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="chart">
+                            <div  ng-if="chartVm.chartType === 'linechart'"  id="lineChart" class="chartGroup-group1-chartType" linear-chart graph="chartVm.graphParams"  data="chartVm.chartData"></div>
+                            <div  ng-if="chartVm.chartType === 'barchart'" id="barChart" class="chartGroup-group1-chartType" bar-chart graph="chartVm.graphParams" data="chartVm.chartData"></div>
+                            <div  ng-if="chartVm.chartType === 'scatterplot'" id="scatterPlot" class="chartGroup-group2-chartType" scatter-plot graph="chartVm.graphParams" data="chartVm.chartData"></div>
+                            <div  ng-if="chartVm.chartType === 'piechart'" id="pieChart" class="chartGroup-group2-chartType" pie-chart graph="chartVm.graphParams" data="chartVm.chartData"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div ui-view></div>
+

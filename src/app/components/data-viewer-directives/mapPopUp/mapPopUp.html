@@ -1,0 +1,28 @@
+<div>
+    <div class="leaflet-popup-card">
+        <div class="card-block">
+                <div class="leaflet-popup-card-content">
+                    <div class="leaflet-popup-card-label">Name :</div>
+                    <div ng-if="lookup({key:'content1'})" class="leaflet-popup-card-value">{{lookupvalue({data:data,key:keys.content1})}}</div>
+            </div>
+            <div ng-if="lookup({key:'content2'})"  class="leaflet-popup-card-content">
+                <div class="leaflet-popup-card-label">Temprature 1:</div>
+                <div class="leaflet-popup-card-value">{{lookupvalue({data:data,key:keys.content2})}}</div>
+            </div>
+            <div class="leaflet-popup-card-content">
+                <div class="leaflet-popup-card-label">Temprature 2:</div>
+                <div ng-if="lookup({key:'content3'})" class="leaflet-popup-card-value">{{lookupvalue({data:data,key:keys.content3})}}</div>
+            </div>
+           <div class="leaflet-popup-card-content">
+               <div class="leaflet-popup-card-label">Temprature 3:</div>
+                   <div ng-if="lookup({key:'content4'})" class="leaflet-popup-card-value">{{lookupvalue({data:data,key:keys.content4})}}</div>
+           </div>
+            <div class="leaflet-popup-card-content">
+                <div class="leaflet-popup-card-label">Health Score:</div>
+                <div class="leaflet-popup-card-value">{{data.health}}</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

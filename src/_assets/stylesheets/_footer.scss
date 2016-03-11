@@ -1,0 +1,80 @@
+footer {
+  .ui-grid {
+    height: 600px !important;
+  }
+
+  .ui-grid-column-menu-button {
+    display: none;
+  }
+
+  .adminBtn {
+    margin:12px;
+    float: right;
+  }
+}
+
+
+
+.box {
+  position: relative;
+  border-radius: 3px;
+  background: #ffffff;
+  border-top: 3px solid #d2d6de;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border-top-color: #3c8dbc;
+}
+
+.box-header {
+  color: #444;
+  display: block;
+  padding: 10px;
+  position: relative;
+}
+.box-header.with-border {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+svg {
+  font: 10px sans-serif;
+}
+
+.area {
+  fill: steelblue;
+  //clip-path: url(http://example.com/mypage#myClip);
+  //-webkit-clip-path: url(#clip);
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+.timeline-label {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.content {
+  padding: 40px;
+  min-height: 140px;
+  background: transparent;
+}
+.coloredDiv {
+  height:20px; width:20px; float:left;
+}
+//#timeline1 .axis {
+//  transform: translate(0px,40px);
+//  -ms-transform: translate(0px,40px); /* IE 9 */
+//  -webkit-transform: translate(0px,40px); /* Safari and Chrome */
+//  -o-transform: translate(0px,40px); /* Opera */
+//  -moz-transform: translate(0px,40px); /* Firefox */
+//}

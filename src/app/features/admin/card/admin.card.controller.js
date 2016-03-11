@@ -6,50 +6,85 @@
       .controller('AdminCardController', AdminCardController);
 
 
-  function AdminCardController(ngDialog,$http,$q,adminCardDialogService,dataService,$scope) {
+  function AdminCardController(ngDialog,$http,$q,adminCardDialogService,dataService,jsonIteratorService,$scope) {
 
     var adminCardVm = this;
+    adminCardVm.isCardEnable = adminCardDialogService.isCardEnable();
+    adminCardVm.cardData = adminCardDialogService.list();
+    adminCardVm.isKeyPresent = isKeyPresent;
+    adminCardVm.removeColumn = removeColumn;
+    adminCardVm.openDialogue = openDialogue;
 
-    adminCardVm.isTableEnable = true;
+    adminCardVm.isCardKeyAvailable = false;
 
 
-    adminCardVm.openDialogue = function () {
+
+    function openDialogue (content) {
       var cardScope = $scope.$new();
       cardScope.layout = 'card';
+      cardScope.content = content;
 
-      var cardDataPromise = dataService.getData();
+        cardScope.cardDataPromise = dataService.getData();
 
-      cardDataPromise.then(function(data){
-        adminCardVm.sampleData = data;
+        cardScope.cardDataPromise.then(function(data){
+        cardScope.sampleData = data;
 
-        adminCardVm.jsonKeys = Object.keys(adminCardVm.sampleData[0]);
+        adminCardVm.jsonKeys = Object.keys(cardScope.sampleData[0]);
+        // adminCardVm.jsonKeys = jsonIteratorService.JsonIterator(cardScope.sampleData[0],'');
 
         ngDialog.open({
           template: 'app/components/templates/modalDialog/admin.modal.tmpl.html',
+          className: 'ngdialog-theme-default dialog-width',
           scope: cardScope,
           controller: "AdminTableDialogController",
           controllerAs: 'adminDialogVm',
           resolve: { columns: function() {
             return adminCardVm.jsonKeys;
-          } }
+          } },
+        }).closePromise.then(function(data){
+            if((data.value) && (typeof data.value === "object")){
+                adminCardVm.cardData = data.value;
+            }
+
         });
       });
-    };
-
-    adminCardVm.list = adminCardDialogService.list();
-
-    adminCardVm.removeColumn = function (colIndex) {
-      adminCardDialogService.remove(colIndex);
-      adminCardVm.list = adminCardDialogService.list();
     }
 
-    //adminTableVm.saveSettings = function(isTableEnable){
-    //  adminTableVm.isTableEnable = isTableEnable
-    //  console.log('Table Controller',adminTableVm.isTableEnable)
-    //  AdminTableDialogService.showTable(adminTableVm.isTableEnable)
-    //}
+      function isKeyPresent(key){
+          for(var cardKey in adminCardVm.cardData ) {
+              if( adminCardVm.cardData.hasOwnProperty(cardKey) ) {
+                  if(key === cardKey) {
+                      switch (cardKey) {
+                          case 'image':
+                              adminCardVm.image = adminCardVm.cardData[cardKey];
+                              break;
+                          case 'name':
+                              adminCardVm.name = adminCardVm.cardData[cardKey];
+                              break;
+                          case 'content1':
+                              adminCardVm.content1 = adminCardVm.cardData[cardKey];
+                              break;
+                          case 'content2':
+                              adminCardVm.content2 = adminCardVm.cardData[cardKey];
+                              break;
+                          default:
+                      }
+                      return true;
 
+                  }
+              }
+          }
+      }
 
+      function removeColumn(cardKey){
+      adminCardDialogService.remove(cardKey);
+      adminCardVm.cardData = adminCardDialogService.list();
+    }
+
+    adminCardVm.saveSettings = function(isCardEnable){
+      adminCardVm.isCardEnable = isCardEnable;
+      adminCardDialogService.showCard(adminCardVm.isCardEnable);
+    };
   }
 
 })(angular);

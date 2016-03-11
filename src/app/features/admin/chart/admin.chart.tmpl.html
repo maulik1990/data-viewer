@@ -1,0 +1,64 @@
+<div class="adminChart">
+    <div class="adminChart-customModule-header">
+        <div class="adminChart-customModule-header-title">Charts</div>
+        <div  class="adminChart-customModule-header-checkBox">
+            <input  ng-model="adminChartVm.isChartEnable" ng-click="adminChartVm.saveSettings(adminChartVm.isChartEnable)" type="checkbox" ng-checked="adminChartVm.isChartEnable">Enable
+        </div>
+    </div>
+    <div class="adminData-customModule-dataSettings-dropDownOptions">
+        <select>
+            <option value="Select Template">Select Template</option>
+            <option value="template1">template1</option>
+            <option value="template2">template2</option>
+            <option value="template3">template3</option>
+            <option value="template4">template4</option>
+        </select>
+    </div>
+    <div class="adminChart-customModule-content">
+         <div class="adminChart-customModule-content-columnsList">
+             <div ng-if="!adminChartVm.isKeyPresent('chart1')" ng-click="adminChartVm.openDialogue('chart1')" class="adminChart-customModule-addElementbtn">Add Chart</div>
+             <div ng-if="adminChartVm.isKeyPresent('chart1')" class="adminChart-customModule-selectedData">
+                 Name: {{adminChartVm.chart1}}
+                 <div ng-click="adminChartVm.removeChart('chart1')" class="adminChart-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+             </div>
+
+             <div ng-if="!adminChartVm.isKeyPresent('chart2')" ng-click="adminChartVm.openDialogue('chart2')" class="adminChart-customModule-addElementbtn">Add Chart</div>
+             <div ng-if="adminChartVm.isKeyPresent('chart2')" class="adminChart-customModule-selectedData">
+                 Name : {{adminChartVm.chart2}}
+                 <div ng-click="adminChartVm.removeChart('chart2')" class="adminChart-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+
+             </div>
+
+             <div ng-if="!adminChartVm.isKeyPresent('chart3')" ng-click="adminChartVm.openDialogue('chart3')" class="adminChart-customModule-addElementbtn">Add Chart</div>
+             <div ng-if="adminChartVm.isKeyPresent('chart3')" class="adminChart-customModule-selectedData">
+                 Name: {{adminChartVm.chart3}}
+                 <div ng-click="adminChartVm.removeChart('chart3')" class="adminChart-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+             </div>
+
+             <div ng-if="!adminChartVm.isKeyPresent('chart4')" ng-click="adminChartVm.openDialogue('chart4')" class="adminChart-customModule-addElementbtn">Add Chart</div>
+             <div ng-if="adminChartVm.isKeyPresent('chart4')" class="adminChart-customModule-selectedData">
+                 Name: {{adminChartVm.chart4}}
+                 <div ng-click="adminChartVm.removeChart('chart4')" class="adminChart-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+             </div>
+
+             </div>
+        <div class="adminChart-customModule-content-template">
+            <div class="adminChart-customModule-content-template-image"></div>
+            <div class="adminChart-customModule-content-template-title"></div>
+            <div class="adminChart-customModule-content-template-subTitle"></div>
+            <div class="adminChart-customModule-content-template-content"></div>
+            <div class="adminChart-customModule-content-template-content"></div>
+            <div class="adminChart-customModule-content-template-content"></div>
+            <div class="adminChart-customModule-content-template-content"></div>
+        </div>
+    </div>
+
+</div>

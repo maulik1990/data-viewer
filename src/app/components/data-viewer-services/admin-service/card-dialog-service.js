@@ -14,36 +14,45 @@
         vm.remove = remove;
         vm.list = list;
         vm.showCard = showCard;
-        vm.isEnable = true
-        vm.cardColumnsColl = [];
+        vm.isCardEnable = isCardEnable;
+        vm.isEnable = true;
+        //vm.cardColumnsColl = [];
+        vm.cardKeysObj = {};
+
 
 
         function add(columnField,columnName) {
-            vm.cardKeysObj = {field: columnField, name: columnName};
-            vm.cardColumnsColl.push(vm.cardKeysObj);
-            localStorage.setItem('cardData', JSON.stringify(vm.cardColumnsColl));
-            ngDialog.close();
+
+            vm.key = columnField;
+            vm.cardKeysObj[vm.key] = columnName;
+            localStorage.setItem('cardData', JSON.stringify(vm.cardKeysObj));
+            ngDialog.closeAll(vm.cardKeysObj);
         }
 
-        function remove(columnIndex) {
+        function remove(cardKey) {
             if(localStorage.cardData) {
                 var localStorageData = localStorage.getItem("cardData");
-                vm.cardColumnsColl = JSON.parse(localStorageData);
-                vm.cardColumnsColl.splice(columnIndex,1);
-                localStorage.setItem('cardData', JSON.stringify(vm.cardColumnsColl));
+                vm.cardKeysObj = JSON.parse(localStorageData);
+                delete vm.cardKeysObj[cardKey];
+                console.log()
+                localStorage.setItem('cardData', JSON.stringify(vm.cardKeysObj));
             }
         }
 
         function list() {
             if(localStorage.cardData) {
                 var localStorageData = localStorage.getItem("cardData");
-                vm.cardColumnsColl = JSON.parse(localStorageData);
+                vm.cardKeysObj = JSON.parse(localStorageData);
             }
-            return vm.cardColumnsColl;
+           return vm.cardKeysObj;
+
         }
 
         function showCard(isEnable){
-            if(isEnable){vm.isEnable = isEnable}
+            vm.isEnable = isEnable;
+        }
+
+        function isCardEnable(){
             return vm.isEnable;
         }
     }

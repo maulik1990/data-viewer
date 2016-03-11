@@ -1,11 +1,9 @@
-.admin{
+.admin {
   &-container {
-    border: 2px solid gray;
-    width: 800px;
-    height: 500px;
-    margin: 25px auto;
+    border: 1px solid gray;
     display: flex;
-
+    position:relative;
+    top:50px;
   }
   &-category {
     flex: 1;
@@ -13,26 +11,50 @@
     height: 100%;
     background-color: #323334;
 
+    & a {
+      color: inherit;
+      text-decoration: none;
+
+      :hover {
+        text-decoration: initial;
+      }
+    }
+
     &-item {
       border: 1px solid gray;
       margin: 11px;
-      text-align: center;
-      padding: 6px;
-      font-size: 15px;
-      background-color: #656667;
+      padding: 10px;
+      font-size: 18px;
+      background-color: #666666;
       cursor: pointer;
       color: #fff;
       font-weight: 500;
 
-      & a {
-        color: inherit;
-        text-decoration: none;
+      &-disable {
+        border: 1px solid gray;
+        margin: 11px;
+        padding: 10px;
+        font-size: 18px;
+        background-color: #4d4d4d;
+        color: grey;
+        font-weight: 500;
       }
+    }
+
+    &-title {
+      margin: 11px;
+      text-align: center;
+      padding: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
     }
 
   }
   &-customModule {
-    flex: 2;
+    flex: 3;
     position: relative;
     background-color: #f1f2f3;
 
@@ -70,5 +92,11 @@
       }
     }
   }
-
+  &-icon {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &-active {
+    border-right:10px solid #469df6;
+  }
 }

@@ -14,7 +14,8 @@
         vm.remove = remove;
         vm.list = list;
         vm.showTable = showTable;
-        vm.isEnable = true
+        vm.isTableEnable = isTableEnable;
+        vm.isEnable = true;
         vm.tableColumnsCol = [];
 
 
@@ -29,7 +30,6 @@
             if(localStorage.tableData) {
                 var localStorageData = localStorage.getItem("tableData");
                 vm.tableColumnsCol = JSON.parse(localStorageData);
-                console.log(columnIndex);
                 vm.tableColumnsCol.splice(columnIndex,1);
                     localStorage.setItem('tableData', JSON.stringify(vm.tableColumnsCol));
             }
@@ -44,7 +44,10 @@
         }
 
         function showTable(isEnable){
-            if(isEnable){vm.isEnable = isEnable}
+            vm.isEnable = isEnable;
+        }
+
+        function isTableEnable(){
             return vm.isEnable;
         }
     }

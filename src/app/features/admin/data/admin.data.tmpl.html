@@ -1,6 +1,28 @@
 <div class="adminData">
-    <div class="adminData-customModule-title">Data Source</div>
-    <input type="text" class="adminData-customModule-properties" name="dataAPI" value="http://data.source/api">
-    <div class="adminData-customModule-title">Data Viewer Height (px)</div>
-    <input type="text" class="adminData-customModule-properties" name="dataViewer" value="300px">
+    <div class="adminData-customModule-header">
+        <div class="adminData-customModule-header-title">General Settings</div>
+    </div>
+    <div class="adminData-customModule-dataSettings">
+        <div class="adminData-customModule-dataSettings-title">API URL</div>
+        <input type="text" class="adminData-customModule-dataSettings-properties" name="dataAPI" value="http://data.source/api">
+        <div class="adminData-customModule-dataSettings-title">Default View</div>
+        <div class="adminData-customModule-dataSettings-dropDownOptions">
+            <select>
+                <option value="table">Table</option>
+                <option value="card">Card</option>
+                <option value="map">Map</option>
+                <option value="charts">Charts</option>
+            </select>
+        </div>
+    </div>
+    <div class="adminData-customModule-designSettings">
+        <div class="adminData-customModule-designSettings-header">Design Settings</div>
+        <div class="adminData-customModule-designSettings-title">Component Height</div>
+        <input type="text" class="adminData-customModule-designSettings-properties" value="400px">
+
+        <div class="adminData-customModule-designSettings-title">Main Color</div>
+        <input type="text" class="adminData-customModule-designSettings-properties" value="#000000">
+
+    </div>
+
 </div>

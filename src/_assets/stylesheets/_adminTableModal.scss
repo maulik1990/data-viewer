@@ -1,16 +1,22 @@
 .adminTableModal {
+  height:500px;
   &-header {
-
+    font-size: 25px;
+    margin: 20px 0 20px 10px;
+    font-weight: 600;
+    font-family: "montserratregular";
   }
   &-modalContent {
     display: flex;
+    height:470px;
   }
   &-data {
     flex:1;
     border: 1px solid grey;
     padding: 15px;
-    height: 300px;
+    height:80%;
     overflow-y: scroll;
+    background-color: #e6e6e6;
 
       &-value {
         border:1px solid #000;
@@ -18,14 +24,19 @@
         margin:5px;
         text-align: center;
         cursor: pointer;
-        background-color: #FFF;
+        background-color: #b3b3b3;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+        font-family: "montserratregular";
+        margin-bottom: 10px;
 
         &:hover{
           background-color: grey;
         }
 
-        &:active {
-          background-color: grey;
+        &:focus{
+          background-color: #000;
         }
       }
 
@@ -36,12 +47,20 @@
       position: relative;
 
       &-labelHeader {
-        font-size:15px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "montserratregular";
+        margin-bottom: 10px;
       }
       &-labelValue {
         width:300px;
         padding-left: 10px;
         border: 1px solid grey;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "montserratregular";
+        margin-bottom: 10px;
+
       }
       &-submit {
         position: absolute;
@@ -51,17 +70,18 @@
         margin: 23px;
         padding: 8px;
         width: 150px;
-        background-color: #583858;
+        background-color: #469df6;
         color: #fff;
         font-weight: 500;
         text-transform: uppercase;
 
       }
     }
-}
-
-.ngdialog-content {
-  width:1000px !important;
+  &-active {
+    background-color: #469df6;
+    color: #fff;
+    border:inherit;
+  }
 }
 button[disabled],html input[disabled]{
   background-color: buttonface;

@@ -2,19 +2,98 @@
 
   &-customModule {
 
-    &-title {
-      margin: 12px 0 10px 20px;
+    &-header {
+      margin: 20px;
+      border-bottom: 1px solid #0C0C0C;
+
+      &-title {
+        display: inline;
+        font-size: 30px;
+        color: #000;
+      }
     }
 
-    &-properties {
-      border: 1px solid #848181;
-      width: 70%;
-      margin: 12px 0 10px 20px;
-      padding: 5px;
-      text-align: center;
-      background-color: #fff;
+    &-designSettings {
+      font-size: 22px;
+      font-weight: 500;
+      color: #000;
+      margin: 30px 0 0 20px;
+
+      &-title {
+        margin: 10px 0 5px 0px;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      &-properties {
+        margin: 10px 0 5px 0px;
+        border: none;
+        width: 25%;
+        padding:3px 0 3px 20px;
+        background-color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+      }
     }
+
+    &-dataSettings{
+
+      &-title {
+        margin: 20px 0 0 20px;
+        color: #000;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      &-properties {
+        border: none;
+        padding: 5px 0 5px 15px;
+        background-color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        width: 70%;
+        margin: 2px 0 0 20px;
+      }
+      &-dropDownOptions {
+        background-color: #FFF;
+        display: inline-block;
+        position: relative;
+        margin: 10px 0 0 20px;
+
+        select {
+          padding: 5px 150px 5px 15px;
+          -webkit-appearance: none;
+          -ms-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border: inherit;
+          background-color: transparent;
+          border-radius: 0;
+          position: relative;
+          cursor: pointer;
+          z-index: 10;
+          font-size: 16px;
+
+          &:focus{
+            outline:none;
+          }
+        }
+        &:after {
+          content: "\f078";
+          font-family: 'FontAwesome';
+          position: absolute;
+          top: 8px;
+          right: 10px;
+          z-index: 5;
+        }
+      }
+
+    }
+    
+
 
   }
 
 }
+

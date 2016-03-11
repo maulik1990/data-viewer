@@ -2,7 +2,7 @@
     <div class="adminTable-customModule-header">
         <div class="adminTable-customModule-header-title">Table</div>
         <div  class="adminTable-customModule-header-checkBox">
-            <input  ng-model="adminTableVm.isGridEnable" type="checkbox"> Enable
+            <input  ng-model="adminTableVm.isTableEnable" ng-click="adminTableVm.saveSettings(adminTableVm.isTableEnable)" type="checkbox" ng-checked="adminTableVm.isTableEnable"> Enable
         </div>
     </div>
     <div class="adminTable-customModule-columnList">
@@ -18,5 +18,4 @@
         </ul>
     </div>
     <div ng-click="adminTableVm.openDialogue()" class="adminTable-customModule-addElementbtn">Add Column</div>
-    <!--<button ng-click="adminTableVm.saveSettings(adminTableVm.isGridEnable)" type="button" class="adminTable-customModule-submit">submit</button>-->
 </div>

@@ -9,6 +9,9 @@
   function AdminViewController() {
 
     var adminVm = this;
+    adminVm.activeTab = 'settings';
+
+    adminVm.windowHeight = window.innerHeight;
   }
 
 })(angular);

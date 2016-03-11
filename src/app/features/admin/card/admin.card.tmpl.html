@@ -2,20 +2,54 @@
     <div class="adminCard-customModule-header">
         <div class="adminCard-customModule-header-title">Cards</div>
         <div  class="adminCard-customModule-header-checkBox">
-            <input  type="checkbox" name="enable" value="enable">Enable
+            <input  ng-model="adminCardVm.isCardEnable" ng-click="adminCardVm.saveSettings(adminCardVm.isCardEnable)" type="checkbox" ng-checked="adminCardVm.isCardEnable">Enable
         </div>
     </div>
-    <div class="adminCard-customModule-columnList">
-        <ul ng-repeat="column in adminCardVm.list track by $index" class="adminCard-customModule-columnsList-columns">
-            <li class="adminCard-customModule-columnsList-column">
-                <div class="adminCard-customModule-columnsList-header">Column {{$index + 1}}</div>
-                <div ng-model="adminCardVm.coulmn" class="adminCard-customModule-columnsList-value">{{column.name}}</div>
-                <div ng-click="adminCardVm.removeColumn($index)" class="adminCard-customModule-columnsList-removeColumn">
-                    <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
-                </div>
-            </li>
+    <div class="adminCard-customModule-content">
+         <div class="adminCard-customModule-content-columnsList">
+             <div ng-if="!adminCardVm.isKeyPresent('image')" ng-click="adminCardVm.openDialogue('image')" class="adminCard-customModule-addElementbtn">Add Data</div>
+             <div ng-if="adminCardVm.isKeyPresent('image')" class="adminCard-customModule-selectedData">
+                 Name: {{adminCardVm.image}}
+                 <div ng-click="adminCardVm.removeColumn('image')" class="adminCard-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+             </div>
 
-        </ul>
+             <div ng-if="!adminCardVm.isKeyPresent('name')" ng-click="adminCardVm.openDialogue('name')" class="adminCard-customModule-addElementbtn">Add Data</div>
+             <div ng-if="adminCardVm.isKeyPresent('name')" class="adminCard-customModule-selectedData">
+                 Name : {{adminCardVm.name}}
+                 <div ng-click="adminCardVm.removeColumn('name')" class="adminCard-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+
+             </div>
+
+             <div ng-if="!adminCardVm.isKeyPresent('content1')" ng-click="adminCardVm.openDialogue('content1')" class="adminCard-customModule-addElementbtn">Add Data</div>
+             <div ng-if="adminCardVm.isKeyPresent('content1')" class="adminCard-customModule-selectedData">
+                 Name: {{adminCardVm.content1}}
+                 <div ng-click="adminCardVm.removeColumn('content1')" class="adminCard-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+             </div>
+
+             <div ng-if="!adminCardVm.isKeyPresent('content2')" ng-click="adminCardVm.openDialogue('content2')" class="adminCard-customModule-addElementbtn">Add Data</div>
+             <div ng-if="adminCardVm.isKeyPresent('content2')" class="adminCard-customModule-selectedData">
+                 Name: {{adminCardVm.content2}}
+                 <div ng-click="adminCardVm.removeColumn('content2')" class="adminCard-customModule-removeColumn">
+                     <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                 </div>
+             </div>
+
+             </div>
+        <div class="adminCard-customModule-content-template">
+            <div class="adminCard-customModule-content-template-image"></div>
+            <div class="adminCard-customModule-content-template-title"></div>
+            <div class="adminCard-customModule-content-template-subTitle"></div>
+            <div class="adminCard-customModule-content-template-content"></div>
+            <div class="adminCard-customModule-content-template-content"></div>
+            <div class="adminCard-customModule-content-template-content"></div>
+            <div class="adminCard-customModule-content-template-content"></div>
+        </div>
     </div>
-    <div ng-click="adminCardVm.openDialogue()" class="adminCard-customModule-addElementbtn">Add Label</div>
+
 </div>
